@@ -22,12 +22,13 @@ public class Runner extends Thread {
             System.out.println(this.getName() + " бежит к Runner " + this.getNextRunner());
 
         } else {
-
             System.out.println(this.getName() + " берет палочку ");
-            System.out.println("Runner 5 бежит к финишу");
+            if (getNextRunner()+1==5){
+                System.out.println(this.getName() + " бежит к финишу ");
+
+            }
             System.out.println(this.getName() + " бежит к Runner " + this.getNextRunner());
         }
-
 
 
     }
