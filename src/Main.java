@@ -4,18 +4,16 @@ public class Main {
         for (int i = 1; i < 5; i++) {
             Runner runner=new Runner("Runner "+i);
             runner.setNextRunner(i+1);
+            runner.index=0;
             runner.start();
             runner.join();
 
         }
-        System.out.println("Runner 5 берет палочку");
-        System.out.println("Runner 5 бежит к финишу");
-        System.out.println("Runner 5 бежит к Runner 4");
-        
 
-        for (int i = 4; i > 1; i--) {
+        for (int i = 5; i > 1; i--) {
             Runner runner = new Runner("Runner " +i);
             runner.setNextRunner(i-1);
+            runner.index=1;
             runner.start();
             runner.join();
 

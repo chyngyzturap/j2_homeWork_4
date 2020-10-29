@@ -6,6 +6,7 @@ public class Runner extends Thread {
     }
 
     private int nextRunner;
+    public int index;
 
     public void setNextRunner(int nextRunner) {
         this.nextRunner = nextRunner;
@@ -16,10 +17,18 @@ public class Runner extends Thread {
     }
 
     public void run() {
+        if (index == 0) {
+            System.out.println(this.getName() + " берет палочку ");
+            System.out.println(this.getName() + " бежит к Runner " + this.getNextRunner());
+
+        } else {
 
             System.out.println(this.getName() + " берет палочку ");
+            System.out.println("Runner 5 бежит к финишу");
+            System.out.println(this.getName() + " бежит к Runner " + this.getNextRunner());
+        }
 
-            System.out.println(this.getName() + " бежит к Runner " +this.getNextRunner());
+
 
     }
 }
