@@ -27,7 +27,7 @@ public class Runner extends Thread {
                 System.out.println(this.getName() + " бежит к финишу ");
 
             }
-            System.out.println(this.getName() + " бежит к Runner " + this.getNextRunner());
+            System.out.println(this.getName() + " бежит к Runner: " + this.getNextRunner());
         }
 
 
